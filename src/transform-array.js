@@ -1,9 +1,8 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(arr) {
-  try {
-    Array.isArray(arr)
-  } catch (error) {
+
+  if (!Array.isArray(arr)) {
     throw new Error(error);
   }
 
